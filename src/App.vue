@@ -1,11 +1,25 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
 <template>
-  <h2>{{ name }}</h2>
-  <h2>{{ count }}</h2>
   <div>
-    <button v-on:click="changeName($event), increment(1, $event)">Change Name</button>
-    <button v-on:click="increment(1, $event)">Increment</button>
+    <!-- Capture user inputs -->
+
+    <!-- Inputs -->
+
+    <!-- Textareas -->
+
+    <!-- Single select dropdown control -->
+
+    <!-- checkbox -->
+
+    <!-- checkbox group -->
+
+    <!-- radio -->
+
+    <!-- submmit form data -->
   </div>
+  
+
+
 </template>
 
 <script>
