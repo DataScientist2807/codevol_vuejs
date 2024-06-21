@@ -1,21 +1,50 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
 <template>
   <div>
-    <!-- Capture user inputs -->
+    <pre>
+      {{ JSON.stringify(formValues, null, 2) }}
+    </pre>
+  </div>
+  <div>
+    <form action="">
+      <!-- Capture user inputs -->
+      <!-- Inputs -->
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" v-model="formValues.name" />
+      </div>
+      <!-- Textareas -->
+      <div>
+        <label for="profile">Profile Summary</label>
+        <textarea id="profile" v-model="formValues.profileSummary"></textarea>
+      </div>
+      <!-- Single select dropdown control -->
+      <div>
+        <label for="country">Country</label>
+        <select id="country" v-model="formValues.country">
+            <option value="">Select a country</option>
+            <option value="india">India</option>
+            <option value="vietnam">Vietnam</option>
+            <option value="signapore">Signapore</option>
+        </select>
+      </div>
+      <!-- Multiple select dropdown control -->
+      <div>
+        <label for="job-location">Job Location</label>
+        <select id="job-location" multiple v-model="formValues.jobLocation">
+            <option value="india">India</option>
+            <option value="vietnam">Vietnam</option>
+            <option value="signapore">Signapore</option>
+        </select>
+      </div>
+      <!-- checkbox -->
 
-    <!-- Inputs -->
+      <!-- checkbox group -->
 
-    <!-- Textareas -->
+      <!-- radio -->
 
-    <!-- Single select dropdown control -->
-
-    <!-- checkbox -->
-
-    <!-- checkbox group -->
-
-    <!-- radio -->
-
-    <!-- submmit form data -->
+      <!-- submmit form data -->
+    </form>
   </div>
 </template>
 
@@ -24,12 +53,15 @@ export default {
   name: "App",
   data() {
     return {
-      
+      formValues: {
+        name: "",
+        profileSummary: "",
+        country: "",
+        jobLocation: []
+      },
     };
   },
-  methods: {
-    
-  }
+  methods: {},
 };
 </script>
 
@@ -38,7 +70,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-/*   text-align: center; */
+  /*   text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
 }
@@ -54,7 +86,7 @@ input + label {
   margin-right: 20px;
 }
 
-input[type='text'],
+input[type="text"],
 textarea,
 select {
   display: block;
