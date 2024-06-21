@@ -1,27 +1,16 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
 <template>
-    <template v-for="name in names" :key="name">
-      <h2>{{ name }}</h2>
-      <input placeholder="Last name"/>
-      <hr>
-    </template>
-    <button @click="shuffle">Shuffle!</button>
+    <h2 v-for="name in names" :key="name">{{ name }}</h2>
 </template>
 
 <script>
-import _ from "lodash";
 export default {
   name: "App",
   data() {
     return {
-      names: ['Bruce', 'Clark', 'Diana', 'Barry']
+      names: ['Bruce', 'Clark', 'Diana']
     };
   },
-  methods: {
-    shuffle() {
-      this.names = _.shuffle(this.names)
-    }
-  }
 };
 </script>
 
