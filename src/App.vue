@@ -1,6 +1,6 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
 <template>
-  
+  <h2>{{ name }}</h2>
 </template>
 
 <script>
@@ -8,6 +8,7 @@ export default {
   name: "App",
   data() {
     return {
+      name: 'Vishwas'
     };
   },
 };
