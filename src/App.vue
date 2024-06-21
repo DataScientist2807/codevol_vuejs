@@ -1,7 +1,6 @@
 <template>
   <h2 v-show="showElement">Using v-show</h2>
   <h2 v-if="showElement">Using v-show</h2>
-
 </template>
 
 <script>
