@@ -1,7 +1,5 @@
 <template>
-  <h2 v-bind:id="headingId">Heading</h2>
-  <button v-bind:disabled="isDisabled">Bind</button>
-  <button v-bind:disabled="enabled">Bind</button>
+    <h2 class="underline">Underlined text</h2>
 </template>
 
 <script>
@@ -25,5 +23,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.underline {
+  text-decoration: underline;
 }
 </style>
