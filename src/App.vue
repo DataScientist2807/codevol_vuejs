@@ -1,6 +1,10 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
 <template>
-    <h2 v-for="name in names" :key="name">{{ name }}</h2>
+    <!-- <h2 v-for="name in names" :key="name" v-if="name === 'Bruce'">{{ name }}</h2> ERROR!!! -->
+    <template v-for="name in names" :key="name" >
+      <h2 v-if="name === 'Bruce'">{{ name }}</h2>
+    </template> 
+    
 </template>
 
 <script>
