@@ -7,9 +7,7 @@ export default {
   name: "App",
   data() {
     return {
-      headingId: "heading",
-      isDisabled: false,
-      enabled: true
+      
     };
   },
 };
