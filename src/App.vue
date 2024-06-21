@@ -17,9 +17,6 @@
 
     <!-- submmit form data -->
   </div>
-  
-
-
 </template>
 
 <script>
@@ -27,19 +24,11 @@ export default {
   name: "App",
   data() {
     return {
-      name: 'Vishwas',
-      count: 0
+      
     };
   },
   methods: {
-    changeName(event) {
-      this.name = 'Batman'
-      console.log('Event', event)
-    },
-    increment(num, event) {
-      this.count += num
-      console.log('Event', event)
-    },
+    
   }
 };
 </script>
