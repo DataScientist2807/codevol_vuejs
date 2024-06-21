@@ -1,10 +1,7 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
 <template>
-    <!-- <h2 v-for="name in names" :key="name" v-if="name === 'Bruce'">{{ name }}</h2> ERROR!!! -->
-    <template v-for="name in names" :key="name" >
-      <h2 v-if="name === 'Bruce'">{{ name }}</h2>
-    </template> 
-    
+  <h2>{{ 2 + 3 + 5 }}</h2>
+  <h2>{{ 5 + 10 + 15 }}</h2>
 </template>
 
 <script>
@@ -12,7 +9,6 @@ export default {
   name: "App",
   data() {
     return {
-      names: ['Bruce', 'Clark', 'Diana']
     };
   },
 };
