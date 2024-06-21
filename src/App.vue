@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div>{{ channel }}</div>
+  <div v-text="channel"></div>
+  <div v-html="channel"></div>
+  <div v-html="hack"></div>
 </template>
 
 <script>
@@ -7,8 +10,9 @@ export default {
   name: "App",
   data() {
     return {
-      
-    }
+      channel: '<b>Codevolution</b>',
+      hack: `<a href="#" onclick="alert('You have been hacked!')">Win a prize!<a/>`,
+          }
   }
 }
 </script>
