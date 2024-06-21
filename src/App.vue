@@ -11,6 +11,12 @@ export default {
       name: 'Vishwas'
     };
   },
+  methods: {
+    changeName(event) {
+      this.name = 'Batman'
+      console.log('Event', event)
+    }
+  }
 };
 </script>
 
