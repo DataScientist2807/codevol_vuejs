@@ -1,6 +1,5 @@
 <template>
-  <h2 v-show="showElement">Using v-show</h2>
-  <h2 v-if="showElement">Using v-show</h2>
+  <h2 v-for="name in names" :key="name">{{ name }}</h2>
 </template>
 
 <script>
@@ -8,7 +7,7 @@ export default {
   name: "App",
   data() {
     return {
-      showElement: false
+      names: ['Bruce', 'Clark', 'Diana']
     };
   },
 };
