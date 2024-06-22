@@ -1,7 +1,7 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
 <template>
-  <div>
-  </div>
+  <h2>{{ name }}</h2>
+  <button @click="name = 'Batman'">Change name</button>
 </template>
 
 <script>
@@ -9,9 +9,7 @@ export default {
   name: "App",
   data() {
     return {
-      formValues: {
-        name: "",
-      },
+        name: "Vishwas",
     };
   },
   methods: {
