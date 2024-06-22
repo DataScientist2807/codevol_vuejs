@@ -4,6 +4,8 @@
   <h2>Fullname - {{ fullName }}</h2>
   <h2>Total - {{ items.reduce((total, curr) => (total = total + curr.price), 0)}}</h2>
   <h2>Computed Total - {{ total }}</h2>
+  <h2>Method Total - {{ getTotal() }}</h2>
+
 <button @click="items.push({id: 4, title: 'Phone', price: 50, })">Add item</button>
 </template>
 
@@ -34,7 +36,9 @@ export default {
     };
   },
   methods: {
-  
+    getTotal() {
+      return this.items.reduce((total, curr) => (total = total + curr.price), 0)
+    }
   },
   computed: {
     fullName() {
