@@ -13,7 +13,7 @@
         <label for="name">Name</label>
         <input type="text" id="name" v-model.trim.lazy="formValues.name" />
       </div>
-      <!-- Age modifier -->
+      <!-- Age number and keyup modifier -->
       <div>
         <label for="age">Age</label>
         <input @keyup.enter="submitForm" type="number" id="age" v-model.number="formValues.age" />
