@@ -1,7 +1,9 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
  <!-- Computed Properties are cached -->
 <template>
-   <Article title="Article Title"/>
+ <Article title="Article Title" :likes="50" :isPublished="true"/> 
+   <!-- <Article :likes="50" :isPublished="true"/> -->
+
  </template>
 
 <script>
