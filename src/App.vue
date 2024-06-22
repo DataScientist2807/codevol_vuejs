@@ -1,6 +1,6 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
 <template>
- <template>
+ <template v-for="item in items" :key="item.id">
   <h2 v-if="item.price > 100">{{ item.title }} {{ item.price }}</h2>
  </template>>
 </template>
