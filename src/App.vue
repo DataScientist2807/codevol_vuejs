@@ -2,6 +2,7 @@
  <!-- Computed Properties are cached -->
 
 <template>
+  <h2>{{ fullname }}</h2>
 <button @click="changeFullName">Change Fullname</button>
 </template>
 
@@ -10,27 +11,13 @@ export default {
   name: "App",
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          title: 'TV',
-          price: 100,
-        },
-        {
-          id: 2,
-          title: 'Phone',
-          price: 200,
-        },
-        {
-          id: 3,
-          title: 'Laptop',
-          price: 300,
-        },
-      ],
+      fullname: 'Bruce Wayne'
     };
   },
   methods: {
-    
+    changeFullName() {
+      this.fullname = 'Clark Kent'
+    }
   },
   computed: {
     fullName: {
