@@ -1,7 +1,11 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
  <!-- Computed Properties are cached -->
 <template>
-  <Greet />
+  <Greet name="Bruce" heroName="Batman"/>
+  <Greet name="Clark" heroName="Superman"/>
+  <Greet name="Diana" heroName="Wonder Woman"/>
+  <Greet :name="name" :heroName="channel"/>
+
 </template>
 
 <script>
@@ -13,6 +17,8 @@ export default {
   },
   data() {
     return {
+      name: 'Vishwas',
+      channel: 'Codevolution'
     };
   },
   methods: {},
