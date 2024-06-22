@@ -2,7 +2,7 @@
  <!-- Computed Properties are cached -->
 
 <template>
-
+<button @click="changeFullName">Change Fullname</button>
 </template>
 
 <script>
@@ -33,7 +33,17 @@ export default {
     
   },
   computed: {
-    
+    fullName: {
+      get() {
+        return `${this.firstName} ${this.lastName}`
+      },
+      set(value) {
+        const names = value.split('')
+        this.firstName = names[0]
+        this.lastName = names[1]
+
+      }
+    }
   }
 };
 </script>
