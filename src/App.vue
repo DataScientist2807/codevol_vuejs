@@ -1,22 +1,32 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
  <!-- Computed Properties are cached -->
 <template>
-  <teleport to="#portal-root">
-    <Portal />
-  </teleport>
+  <div class="container">
+    <div class="content">
+      <h1>My App</h1>
+      <p>
+        sdsadfdsfdsfdsfd
+      </p>
+      <button @click="showModal = true">Show Modal</button>
+      <teleport to="#modal-root">
+        <Modal v-show="showModal" @close="showModal = false">This is the secret modal message
+        </Modal>
+      </teleport>
+    </div>
+  </div>
  </template>
 
 <script>
-import Portal from './components/Portal.vue'
+import Modal from './components/Modal.vue'
 
 export default {
   name: "App",
   components: {
-    Portal,
+    Modal,
   },
   data() {
     return {
-      
+      showModal: false,
     };
   },
   methods: {},
