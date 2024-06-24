@@ -1,15 +1,16 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
  <!-- Computed Properties are cached -->
 <template>
- 
+ <Portal />
  </template>
 
 <script>
-import Article from './components/Article.vue'
+import Portal from './components/Portal.vue'
 
 export default {
   name: "App",
   components: {
+    Portal,
   },
   data() {
     return {
