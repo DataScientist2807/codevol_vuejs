@@ -1,7 +1,9 @@
 <!-- https://github.com/gopinav/Vue-3-Tutorials/blob/master/vue-fundamentals/src/App.vue -->
  <!-- Computed Properties are cached -->
 <template>
- <Portal />
+  <teleport to="#portal-root">
+    <Portal />
+  </teleport>
  </template>
 
 <script>
